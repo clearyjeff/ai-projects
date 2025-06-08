@@ -129,12 +129,22 @@ celerybeat.pid
 
 # Environments
 .env
+.env.local
 .venv
 env/
 venv/
 ENV/
 env.bak/
 venv.bak/
+
+# Database files
+*.db
+chroma_db/
+all_products.db/
+
+# Project-specific
+config.json
+.DS_Store
 
 # Spyder project settings
 .spyderproject

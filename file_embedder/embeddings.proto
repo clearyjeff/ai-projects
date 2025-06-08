@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package embeddings;
+
+service EmbeddingsService {
+  rpc GenerateEmbeddings (EmbeddingsRequest) returns (EmbeddingsResponse) {}
+}
+
+message EmbeddingsRequest {
+  repeated string sentences = 1;
+}
+
+message EmbeddingsResponse {
+  repeated bytes embeddings = 1; // Serialized numpy array
+}
